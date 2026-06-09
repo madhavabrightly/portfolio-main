@@ -1,0 +1,22 @@
+Deploy to GitHub Pages (no server required)
+===========================================
+
+1) Push this entire folder to a GitHub repository.
+
+2) In GitHub: Settings → Pages → Source → Deploy from branch
+   - Branch: main (or master)
+   - Folder: / (root)
+
+3) Open your live site:
+   https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
+
+The floating 3D bot loads from embedded files — no local server needed:
+  - assets/js/bot-model-data.js   (embedded 3D model)
+  - assets/vendor/model-viewer/   (local model-viewer library)
+
+Optional local preview (only if you want):
+  - Double-click index.html may work in some browsers
+  - Or run: .\serve.ps1  then open http://localhost:8000/index.html
+
+To regenerate bot-model-data.js after changing the GLB file:
+  python build_bot_model_data.py
