@@ -2018,3 +2018,154 @@ section,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* GitHub Pages contrast finish */
+body.monochrome {
+  background:
+    radial-gradient(circle at 14% 6%, #fff 0 9%, transparent 30%),
+    radial-gradient(circle at 86% 12%, rgba(0,0,0,.18), transparent 30%),
+    linear-gradient(135deg, #fff 0%, #ecece8 42%, #b9b9b2 100%);
+}
+.monochrome .hero {
+  background: #000;
+}
+.monochrome .hero > img {
+  opacity: .62;
+  filter: grayscale(1) contrast(1.72) brightness(.3);
+}
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.99) 0%, rgba(0,0,0,.88) 38%, rgba(0,0,0,.5) 100%),
+    radial-gradient(circle at 72% 20%, rgba(255,255,255,.24), transparent 24%),
+    radial-gradient(circle at 15% 70%, rgba(255,255,255,.12), transparent 30%),
+    linear-gradient(0deg, #000, transparent 52%);
+}
+.hero-copy,
+.hero-showcase,
+.contact-wrap {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(255,255,255,.5);
+  background:
+    linear-gradient(150deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.88) 52%, rgba(255,255,255,.1) 100%);
+  box-shadow:
+    0 34px 110px rgba(0,0,0,.7),
+    inset 0 1px 0 rgba(255,255,255,.26),
+    inset 0 -1px 0 rgba(255,255,255,.08);
+}
+.hero-copy:after,
+.hero-showcase:after,
+.contact-wrap:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(125deg, rgba(255,255,255,.18), transparent 26%, transparent 76%, rgba(255,255,255,.1));
+  mix-blend-mode: screen;
+}
+.hero-copy h1 {
+  color: #fff;
+  text-shadow:
+    0 3px 0 rgba(255,255,255,.08),
+    0 18px 38px rgba(0,0,0,.86);
+}
+.hero-copy h1 span {
+  color: #fff;
+  -webkit-text-stroke: 0;
+}
+.hero-copy > p,
+.hero-showcase h2,
+.contact-wrap h2 {
+  text-shadow: 0 12px 28px rgba(0,0,0,.9);
+}
+.primary-btn,
+.showcase-btn,
+.contact-email {
+  background: linear-gradient(180deg, #fff, #dcdcdc);
+  border-color: #fff;
+  color: #050505;
+  box-shadow: 0 16px 35px rgba(0,0,0,.4), inset 0 1px 0 #fff;
+}
+.primary-btn:hover,
+.showcase-btn:hover,
+.contact-email:hover {
+  background: #050505;
+  color: #fff;
+  border-color: #fff;
+}
+.text-link,
+.hero-link-grid a,
+.hero-copy .social-links a {
+  border-color: rgba(255,255,255,.62);
+  background: rgba(255,255,255,.06);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+}
+.text-link:hover,
+.hero-link-grid a:hover,
+.hero-copy .social-links a:hover {
+  background: #fff;
+  color: #050505;
+}
+.hero-link-field,
+.showcase-stack div {
+  background: rgba(0,0,0,.58);
+  border-color: rgba(255,255,255,.38);
+}
+.showcase-label {
+  background: #fff;
+  color: #050505;
+  box-shadow: 0 12px 30px rgba(0,0,0,.34);
+}
+.section-fade {
+  background:
+    linear-gradient(135deg, #fff 0%, #f4f4f0 38%, #d1d1c9 100%);
+}
+.section-heading h2,
+.lead-copy,
+.project-card h3,
+.education-card h2 {
+  color: #020202;
+}
+.quick-facts,
+.project-card {
+  background: rgba(255,255,255,.88);
+  border-color: rgba(0,0,0,.14);
+  box-shadow: 0 18px 50px rgba(0,0,0,.12);
+}
+.project-card:hover {
+  background: #020202;
+  color: #fff;
+  border-color: #020202;
+}
+.dark-panel {
+  background:
+    radial-gradient(circle at 14% 0%, rgba(255,255,255,.18), transparent 28%),
+    radial-gradient(circle at 82% 16%, rgba(255,255,255,.1), transparent 26%),
+    linear-gradient(135deg, #000 0%, #101010 50%, #000 100%);
+}
+.skill-card {
+  border-color: rgba(255,255,255,.18);
+  background: linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.02));
+}
+.education {
+  background:
+    radial-gradient(circle at 20% 10%, #fff, transparent 28%),
+    linear-gradient(145deg, #bebeb6, #fff);
+}
+
+@media (max-width: 700px) {
+  .monochrome .hero > img {
+    opacity: .48;
+    filter: grayscale(1) contrast(1.8) brightness(.24);
+  }
+  .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.98) 100%),
+      radial-gradient(circle at 78% 18%, rgba(255,255,255,.18), transparent 28%);
+  }
+  .hero-copy,
+  .hero-showcase {
+    background: linear-gradient(150deg, rgba(0,0,0,.97) 0%, rgba(0,0,0,.9) 62%, rgba(255,255,255,.08) 100%);
+  }
+}
